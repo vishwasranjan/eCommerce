@@ -84,7 +84,7 @@ public class MainActivity extends AppCompatActivity {
                         if (user.getPassword().equals(userpasswordkey))
                         {
                             Toast.makeText(MainActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
-                            Intent intent=new Intent(MainActivity.this,HomeActivity.class);
+                            Intent intent=new Intent(MainActivity.this,HomeActivity2.class);
                             startActivity(intent);
                         }
                         else

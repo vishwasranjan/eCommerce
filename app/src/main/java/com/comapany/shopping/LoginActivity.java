@@ -129,8 +129,9 @@ public class LoginActivity extends AppCompatActivity {
                            else if (parentsDBname.equals("Users"))
                            {
                                Toast.makeText(LoginActivity.this,"Signned In Sucessfully",Toast.LENGTH_SHORT).show();
-                               Intent intent=new Intent(LoginActivity.this,HomeActivity.class);
+                               Intent intent=new Intent(LoginActivity.this,HomeActivity2.class);
                                startActivity(intent);
+                               Prevalent.CurrntOnlineuser=user;
                            }
                         }
                         else
