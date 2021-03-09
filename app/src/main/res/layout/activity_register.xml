@@ -5,13 +5,13 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".RegisterActivity"
-    android:background="@drawable/register">
+    android:background="@drawable/register_image">
 
     <ImageView
         android:id="@+id/register_applogo"
         android:layout_width="300dp"
         android:layout_height="100dp"
-        android:src="@drawable/applogo"
+        android:src="@drawable/app_icon"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="200dp"/>
     <EditText

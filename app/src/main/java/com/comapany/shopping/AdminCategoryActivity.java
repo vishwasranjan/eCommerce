@@ -8,135 +8,143 @@ import android.view.View;
 import android.widget.ImageView;
 
 public class AdminCategoryActivity extends AppCompatActivity {
-    private ImageView tShirts,sportsTShirts,femaleDresses,sweaters;
-    private ImageView glasses,hatscaps,walletsBagsPurses,shoes;
-    private ImageView headphonesHandFree,laptops,watches,mobilePhones;
+    private ImageView Books,Clothes,femaleDresses,sweaters;
+    private ImageView BoardAndOtherGames,ActivityandLargeToys,MontessoriWoodenToys,shoes;
+    private ImageView LearningandEducationToys,InfantandToddlerToys,PretendPlayToys,mobilePhones;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
-        tShirts=findViewById(R.id.t_shirts);
-        sportsTShirts=findViewById(R.id.sports_t_shirts);
-        femaleDresses=findViewById(R.id.female_dresses);
-        sweaters=findViewById(R.id.sweters);
-        glasses=findViewById(R.id.glasses);
-        hatscaps=findViewById(R.id.hats);
-        walletsBagsPurses=findViewById(R.id.purses_bags_wallets);
-        shoes=findViewById(R.id.shoes);
-        headphonesHandFree=findViewById(R.id.headphones);
-        laptops=findViewById(R.id.laptop_pc);
-        watches=findViewById(R.id.watches);
-        mobilePhones=findViewById(R.id.mobilephones);
+        Books=findViewById(R.id.books);
+        Clothes=findViewById(R.id.clothes);
+//        femaleDresses=findViewById(R.id.female_dresses);
+//        sweaters=findViewById(R.id.sweters);
+        BoardAndOtherGames=findViewById(R.id.board_and_other_games);
+        ActivityandLargeToys=findViewById(R.id.activity_and_large_toys);
+        MontessoriWoodenToys=findViewById(R.id.montessori_wooden_toys);
+      //  shoes=findViewById(R.id.shoes);
+        LearningandEducationToys=findViewById(R.id.Learning_and_Education_Toys);
+        InfantandToddlerToys=findViewById(R.id.Infant_and_Toddler_Toys);
+        PretendPlayToys=findViewById(R.id.PretendPlayToys);
+        //mobilePhones=findViewById(R.id.mobilephones);
 
-        tShirts.setOnClickListener(new View.OnClickListener() {
+        Books.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","tShirts");
+                intent.putExtra("category","Books");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        sportsTShirts.setOnClickListener(new View.OnClickListener() {
+        Clothes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Sports tShirts");
+                intent.putExtra("category","Clothes");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
-        femaleDresses.setOnClickListener(new View.OnClickListener() {
+//        femaleDresses.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+//                intent.putExtra("category","Female Dresses");
+//                startActivity(intent);
+//            }
+//        });
+
+//        sweaters.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+//                intent.putExtra("category","Sweaters");
+//                startActivity(intent);
+//            }
+//        });
+
+
+        BoardAndOtherGames.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Female Dresses");
-                startActivity(intent);
-            }
-        });
-
-        sweaters.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Sweaters");
-                startActivity(intent);
-            }
-        });
-
-
-        glasses.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Glasses");
-                startActivity(intent);
-            }
-        });
-
-        hatscaps.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Hats Caps");
+                intent.putExtra("category","Board and Other Games");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        walletsBagsPurses.setOnClickListener(new View.OnClickListener() {
+        ActivityandLargeToys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Wallets Bags Purses");
+                intent.putExtra("category","Activity and Large Toys");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        shoes.setOnClickListener(new View.OnClickListener() {
+        MontessoriWoodenToys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Shoes");
+                intent.putExtra("category","Montessori Wooden Toys");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        headphonesHandFree.setOnClickListener(new View.OnClickListener() {
+//        shoes.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+//                intent.putExtra("category","Shoes");
+//                startActivity(intent);
+//            }
+//        });
+
+        LearningandEducationToys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Headphones Handfree");
+                intent.putExtra("category","Learning and Education Toys");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        laptops.setOnClickListener(new View.OnClickListener() {
+        InfantandToddlerToys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Laptops");
+                intent.putExtra("category","Infant and Toddler Toys");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
-        watches.setOnClickListener(new View.OnClickListener() {
+        PretendPlayToys.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Watches");
+                intent.putExtra("category","Pretend Play Toys");
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
 
 
-        mobilePhones.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
-                intent.putExtra("category","Mobile Phones");
-                startActivity(intent);
-            }
-        });
+//        mobilePhones.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent=new Intent(AdminCategoryActivity.this,AdminAddNewProductActivity.class);
+//                intent.putExtra("category","Mobile Phones");
+//                startActivity(intent);
+//            }
+//        });
 
         
     }

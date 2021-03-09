@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,LoginActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
@@ -49,6 +50,7 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent=new Intent(MainActivity.this,RegisterActivity.class);
+                intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
@@ -85,6 +87,7 @@ public class MainActivity extends AppCompatActivity {
                         {
                             Toast.makeText(MainActivity.this,"Welcome",Toast.LENGTH_SHORT).show();
                             Intent intent=new Intent(MainActivity.this,HomeActivity2.class);
+                            Prevalent.CurrntOnlineuser=user;
                             startActivity(intent);
                         }
                         else

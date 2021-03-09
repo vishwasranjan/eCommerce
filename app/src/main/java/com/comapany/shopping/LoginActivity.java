@@ -124,12 +124,14 @@ public class LoginActivity extends AppCompatActivity {
                            {
                                Toast.makeText(LoginActivity.this,"Admin is Signned in Sucessfully",Toast.LENGTH_SHORT).show();
                                Intent intent=new Intent(LoginActivity.this,AdminCategoryActivity.class);
+                               intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                startActivity(intent);
                            }
                            else if (parentsDBname.equals("Users"))
                            {
                                Toast.makeText(LoginActivity.this,"Signned In Sucessfully",Toast.LENGTH_SHORT).show();
                                Intent intent=new Intent(LoginActivity.this,HomeActivity2.class);
+                               intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                startActivity(intent);
                                Prevalent.CurrntOnlineuser=user;
                            }

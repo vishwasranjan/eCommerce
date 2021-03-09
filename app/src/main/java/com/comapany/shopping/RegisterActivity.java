@@ -99,6 +99,7 @@ public class RegisterActivity extends AppCompatActivity {
                                     {
                                         Toast.makeText(RegisterActivity.this,"Account is created sucessfully",Toast.LENGTH_SHORT).show();
                                         Intent intent=new Intent(RegisterActivity.this,LoginActivity.class);
+                                        intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                                         startActivity(intent);
                                     }
                                     else
@@ -114,6 +115,7 @@ public class RegisterActivity extends AppCompatActivity {
                     //if the user have alredy have an account then we can ask them to use another no
                     Toast.makeText(RegisterActivity.this,"This "+ phone+" already exixts",Toast.LENGTH_SHORT).show();
                     Intent intent=new Intent(RegisterActivity.this,MainActivity.class);
+                    intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK|Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent);
                     Toast.makeText(RegisterActivity.this,"Plaese try with another phone number",Toast.LENGTH_SHORT).show();
                 }

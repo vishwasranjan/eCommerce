@@ -36,7 +36,8 @@ public class HomeActivity2 extends AppCompatActivity implements NavigationView.O
     RecyclerView.LayoutManager layoutManager;
 
     @Override
-    protected void onCreate(Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState)
+    {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home2);
         navigationView = findViewById(R.id.navigation_view);
@@ -54,7 +55,7 @@ public class HomeActivity2 extends AppCompatActivity implements NavigationView.O
         View headerview=navigationView.getHeaderView(0);
         TextView username=headerview.findViewById(R.id.nav_user_profile_name);
         CircleImageView userprofilepic=headerview.findViewById(R.id.nav_user_profile_image);
-        //username.setText(Prevalent.CurrntOnlineuser.getName());
+        username.setText(Prevalent.CurrntOnlineuser.getName());
     }
 
 
@@ -92,7 +93,8 @@ public class HomeActivity2 extends AppCompatActivity implements NavigationView.O
         switch (item.getItemId())
         {
             case R.id.nav_cart:
-                Toast.makeText(this,"home",Toast.LENGTH_SHORT).show();
+                Intent intent2=new Intent(HomeActivity2.this,CartActivity.class);
+                startActivity(intent2);
                 return true;
             case R.id.nav_order:
                 Toast.makeText(this,"video",Toast.LENGTH_SHORT).show();
@@ -101,10 +103,10 @@ public class HomeActivity2 extends AppCompatActivity implements NavigationView.O
                 Toast.makeText(this,"audio",Toast.LENGTH_SHORT).show();
                 return true;
             case R.id.nav_settings:
-                Toast.makeText(this,"setting",Toast.LENGTH_SHORT).show();
+                Intent intent=new Intent(HomeActivity2.this,SettingActivity.class);
+                startActivity(intent);
                 return true;
             case R.id.nav_logout:
-                Toast.makeText(this,"logout",Toast.LENGTH_SHORT).show();
                 AlertShowForLogout();
                 return  true;
         }
